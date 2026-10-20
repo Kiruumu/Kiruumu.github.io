@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Slevin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stars"></div>
+
+  <nav>
+    <span class="logo">max.dev</span>
+    <div class="nav-right">
+      <button class="nav-link active" data-page="home" onclick="showPage('home')" data-i18n="navHome">Home</button>
+      <button class="nav-link" data-page="projects" onclick="showPage('projects')" data-i18n="navProjects">Projects</button>
+      
+      <!-- Two-Flag Language Toggle -->
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button class="flag-btn active" onclick="setLanguage('en')" aria-label="English">🇬🇧</button>
+        <button class="flag-btn" onclick="setLanguage('ua')" aria-label="Ukrainian">🇺🇦</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="page active" id="page-home">
+    <main>
+      <p class="eyebrow fade-in"><span id="typed-role"></span><span class="cursor"></span></p>
+      <h1 class="fade-in"><span data-i18n="heroName1">Max</span><br><em data-i18n="heroName2">Slevin</em></h1>
+
+      <div class="about fade-in">
+        <p data-i18n="bio1">I’m a web developer based in Ukraine with 4 years of experience in web development. I value clean code, thoughtful design, and attention to detail, with a focus on creating websites that look good and work smoothly across different devices.</p>
+        <p data-i18n="bio2">I believe good development is about finding the right balance between simplicity, functionality, and design. I’m always looking to refine my skills, explore new technologies, and keep up with modern web development practices.</p>
+      </div>
+
+      <p class="section-label fade-in" data-i18n="techLabel">Technologies</p>
+      <div class="tech-list fade-in">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JS</span>
+        <span>Tailwind</span>
+        <span>Flask</span>
+        <span>Python</span>
+        <span>Git</span>
+      </div>
+
+      <div class="cta-row fade-in">
+        <button class="btn btn-primary" onclick="showPage('projects')" data-i18n="btnView">View Projects →</button>
+      </div>
+    </main>
+  </div>
+
+  <div class="page" id="page-projects">
+    <main>
+      <p class="eyebrow fade-in" data-i18n="projEyebrow">Selected Work</p>
+      <h1 class="fade-in" data-i18n="projTitle">Projects</h1>
+      <p class="sub fade-in" data-i18n="projSub">Click any project to open</p>
+      <div id="project-list" class="fade-in"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
